@@ -21,10 +21,10 @@ def main() :
     #1. asking user number
     number = 0
     print("this is main")
-    user_input =  asking_user_and_getting_data("Please enter number : ")
 
     #2. divide user number with 2 and check remainder
-    while number != 0 :
+    while number == 0 :
+        user_input = asking_user_and_getting_data("Please enter number : ")
         number = convert_string_into_int(user_input)
 
     #3. if remainder is 0 than it is even otherwise it is odd
