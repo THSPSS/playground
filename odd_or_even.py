@@ -6,12 +6,12 @@ def check_odd_or_even(input_number:int)-> str:
         return f"{input_number} is odd"
 
 
-def convert_string_into_int(input_string:str) -> int:
+def convert_string_into_int(input_string:str) -> int | None:
     try:
         return int(input_string)
     except ValueError:
         print("Please enter numbers only")
-        return 0
+        return None
 
 def asking_user_and_getting_data(question : str) -> str:
     return input(question)
@@ -19,17 +19,15 @@ def asking_user_and_getting_data(question : str) -> str:
 
 def main() :
     #1. asking user number
-    number = 0
-    print("this is main")
+    number = None
 
     #2. divide user number with 2 and check remainder
-    while number == 0 :
+    while number is None :
         user_input = asking_user_and_getting_data("Please enter number : ")
         number = convert_string_into_int(user_input)
 
     #3. if remainder is 0 than it is even otherwise it is odd
     result = check_odd_or_even(number)
-
     print(result)
 
 if __name__ == "__main__":
