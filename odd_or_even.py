@@ -55,9 +55,9 @@ def main() :
     num, check = convert_string_into_int(num) , convert_string_into_int(check)
 
     if num % check == 0:
-        print (f"{check} divides evenly into {num}")
+        print (f"{num} divides evenly by {check}")
     else:
-        print(f"{check} does not divide evenly into {num}")
+        print(f"{num} does not divide evenly by {check}")
 
 if __name__ == "__main__":
     main()
