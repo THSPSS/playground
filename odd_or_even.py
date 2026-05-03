@@ -46,8 +46,19 @@ def main() :
         result = check_odd_or_even(number)
         print(result)
 
+    num , check  = None , None
+
+    while num is None and check is None:
+        user_input = asking_user_and_getting_data("Please enter two numbers divide with space (ex, 23 12) : ")
+        num , check = get_two_answers_from_user(user_input)
+
+    num, check = convert_string_into_int(num) , convert_string_into_int(check)
+
+    if num % check == 0:
+        print (f"{check} divides evenly into {num}")
+    else:
+        print(f"{check} does not divide evenly into {num}")
+
 if __name__ == "__main__":
-    random_string = "302 2433"
-    print(random_string.split()[0])
-    # main()
+    main()
 
