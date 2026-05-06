@@ -21,7 +21,10 @@ def main():
     for num in a :
         if num < int_user_number :
             print(num)
-            result_list.insert(num)
+            #result_list.insert(num)
+            result_list.append(num)
+
+    result_list.sort()
 
     print([num for num in a if num < 5])
     print(result_list)
