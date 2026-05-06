@@ -7,6 +7,7 @@ while is_this_keep_working:
     if greeting_and_continue=="":
         age = "0"
         is_contain_char = True
+        int_age = 0
         name = input("Enter your name : ")
 
 

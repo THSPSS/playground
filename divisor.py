@@ -14,10 +14,10 @@ def main():
     if int_number == 1 :
         return print("divisor of" , int_number , "is itself" )
     range_list = range(1, int_number)
-    divisor_list = []
-    for num in range_list:
-        if int_number % num == 0:
-            divisor_list.append(num)
+    divisor_list = [ num for num in range_list if int_number % num == 0]
+    # for num in range_list:
+    #     if int_number % num == 0:
+    #         divisor_list.append(num)
 
     return print("divisor of" , int_number , "is" , divisor_list)
 
