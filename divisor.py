@@ -13,7 +13,8 @@ def main():
         int_number = convert_string_into_int(user_input)
     if int_number == 1 :
         return print("divisor of" , int_number , "is itself" )
-    range_list = range(1, int_number)
+    range_list = list(range(1, int_number + 1))
+    print(range_list)
     divisor_list = [ num for num in range_list if int_number % num == 0]
     # for num in range_list:
     #     if int_number % num == 0:
