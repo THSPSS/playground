@@ -1,3 +1,7 @@
+import random
+
+outcomes = ['r' , 'p' , 's']
+
 def main():
     game_is_on = True
     #using while loop
