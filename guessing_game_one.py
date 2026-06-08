@@ -7,8 +7,8 @@ def main():
     count_the_guesses = 0
     user_guess = None
     int_user_guess = None
-    # generate random number between 1 and 9
     the_number = random.randint(1, 9)
+    # generate random number between 1 and 9
     while user_guess != "exit" or int_user_guess != the_number:
         # if count_the_guesses > 3:
         #     print("Sorry , your try is over :(")
@@ -27,6 +27,7 @@ def main():
             print("Your answer is lower than the number")
         #count the try of user
         count_the_guesses += 1
+
 
     if user_guess != "exit":
         print("Congratulation! You guessed right :)")
