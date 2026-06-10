@@ -6,11 +6,12 @@ import random
 
 def main():
     print("list overlap comprehensions")
-    a = [random.randint(1, 90) for _ in range(11)]
-    b = [random.randint(1, 90) for _ in range(6)]
+    a = random.sample(range(100), 5)
+    b = random.sample(range(100), 10)
+    print(a, b)
 
 
 
 
 if __name__ == "__main__":
-    main();
+    main()
