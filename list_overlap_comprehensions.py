@@ -8,6 +8,7 @@ other_length_of_list = [3,5,5,20,1]
 def main():
     a = random.sample(range(10), 5)
     b = random.sample(range(10), 9)
+    
     print(set(a))
     result_overlap = [i for i in set(a) if i in b]
 
