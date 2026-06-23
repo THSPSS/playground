@@ -6,19 +6,22 @@ def is_even(num):
 
 def check_primality():
     num = get_integer()
-    result = []
-    if is_even(num):
-        return "This is not prime number"
 
-    for i in range(2, num - 1):
-        if num % i == 0:
-            result.append(i)
-    if len(result) == 0:
-        return "This is prime number"
+    if num > 0 :
+        for i in range(2, num - 1):
+            if num % i != 0:
+                continue
+            elif num % i == 0:
+                print( "This number is not prime")
+                break
+    elif num == 0:
+        print("This number is not prime")
     else:
-        return "This is not Prime number"
+        print("this number is not prime")
+
+
+
 
 
 if __name__ == "__main__":
-    print("init")
-    print(check_primality())
+    check_primality()
