@@ -11,7 +11,6 @@ def check_primality():
         return "This is not prime number"
 
     for i in range(2, num - 1):
-        print(i)
         if num % i == 0:
             result.append(i)
     if len(result) == 0:
