@@ -5,18 +5,20 @@
 def function():
     times = 0
     start_number = 1
-    fibonnaci_list = [start_number, start_number]
+    fibonnaci_list = [start_number, start_number+0]
 
     while times == 0:
         times = input("How many Fibonnaci numbers do you want to generate? : ")
         times = int(times)
 
-        for i in range(0, times-2):
-            if i == 1:
-                print(fibonnaci_list[:0])
-                break
+        if times == 1:
+            print([1])
+            break
+        for i in range(0, times-1):
+            print(i)
+            print(fibonnaci_list)
             fibonnaci_list.append(fibonnaci_list[len(fibonnaci_list)-1] + fibonnaci_list[len(fibonnaci_list)-2])
-    print(fibonnaci_list)
+
     # get current number from fibonnaci list
 
     # -1과 -2가 null 값일때는 그냥 + 1 하기
