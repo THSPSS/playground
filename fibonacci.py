@@ -11,10 +11,10 @@ def function():
         times = input("How many Fibonnaci numbers do you want to generate? : ")
         times = int(times)
 
-    if times == 1:
-        print(fibonnaci_list[0])
-    else :
         for i in range(0, times-2):
+            if i == 1:
+                print(fibonnaci_list[:0])
+                break
             fibonnaci_list.append(fibonnaci_list[len(fibonnaci_list)-1] + fibonnaci_list[len(fibonnaci_list)-2])
     print(fibonnaci_list)
     # get current number from fibonnaci list
