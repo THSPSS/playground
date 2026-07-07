@@ -14,6 +14,8 @@ def function():
         if times == 1:
             print([1])
             break
+        if times == 2:
+            print([1,1])
         for i in range(0, times-1):
             print(i)
             print(fibonnaci_list)
