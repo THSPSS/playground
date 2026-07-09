@@ -4,22 +4,22 @@
 
 def function():
     times = 0
-    start_number = 1
-    fibonnaci_list = [start_number, start_number+0]
+    number = 1
 
     while times == 0:
-        times = input("How many Fibonnaci numbers do you want to generate? : ")
+        times = input("How many Fibonacci numbers do you want to generate? : ")
         times = int(times)
 
-        if times == 1:
-            print([1])
-            break
-        if times == 2:
-            print([1,1])
-        for i in range(0, times-1):
-            print(i)
-            print(fibonnaci_list)
-            fibonnaci_list.append(fibonnaci_list[len(fibonnaci_list)-1] + fibonnaci_list[len(fibonnaci_list)-2])
+    if times == 1:
+        fibonaci_list = [1]
+    elif times == 2:
+        fibonaci_list = [1, 1]
+    elif times > 2:
+        fibonacci_list = [1, 1]
+        while number < (times - 1):
+            fibonacci_list.append(fibonacci_list[number] + fibonacci_list[number-1])
+            number += 1
+    return fibonacci_list
 
     # get current number from fibonnaci list
 
