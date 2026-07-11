@@ -11,9 +11,9 @@ def function():
         times = int(times)
 
     if times == 1:
-        fibonaci_list = [1]
+        fibonacci_list = [1]
     elif times == 2:
-        fibonaci_list = [1, 1]
+        fibonacci_list = [1, 1]
     elif times > 2:
         fibonacci_list = [1, 1]
         while number < (times - 1):
@@ -33,5 +33,5 @@ def function():
 
 
 if __name__ == "__main__":
-    print("this is main from fibonacci")
-    function()
+    final_list = function()
+    print(final_list)
