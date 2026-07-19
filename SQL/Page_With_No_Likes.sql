@@ -8,7 +8,7 @@ SELECT pg.page_id
   FROM pages pg
        LEFT JOIN page_likes pl ON pg.page_id = pl.page_id
  WHERE pl.user_id is null;
-
+ ORDER BY page_id;
 
  SELECT page_id
    FROM pages
