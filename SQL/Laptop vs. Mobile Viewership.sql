@@ -20,6 +20,20 @@ cte_laptop_view AS (
   WHERE device_type = "laptop";
 );
 
+
+cte_mobile_view AS (
+  SELECT 1 as num,
+  COUNT(*) AS mobile_reviews
+  FROM viewership
+  WHERE device_type IN ("tablet", "phone"))
+
+cte_laptop_view AS (
+  SELECT 2 as num,COUNT(*) AS laptop_reviews
+  FROM viewership
+  WHERE device_type = "laptop";
+);
+
+
 SELECT COUNT(*) FROM viewership
 WHERE DEVICE_TYPE IN ("tablet", "phone");
 
