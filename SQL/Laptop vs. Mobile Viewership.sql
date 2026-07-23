@@ -37,3 +37,8 @@ cte_laptop_view AS (
 SELECT COUNT(*) FROM viewership
 WHERE DEVICE_TYPE IN ("tablet", "phone");
 
+
+select CASE WHEN device_type = "laptop" then 1 else 0 end as laptop_views,
+       case when device_type IN ("tablet", "phone") then 1 else 0 end as mobile_views
+from viewership;
+
