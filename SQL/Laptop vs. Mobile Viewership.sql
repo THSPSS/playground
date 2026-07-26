@@ -38,7 +38,10 @@ SELECT COUNT(*) FROM viewership
 WHERE DEVICE_TYPE IN ("tablet", "phone");
 
 
-select CASE WHEN device_type = "laptop" then 1 else 0 end as laptop_views,
+with cte_table as (select CASE WHEN device_type = "laptop" then 1 else 0 end as laptop_views,
        case when device_type IN ("tablet", "phone") then 1 else 0 end as mobile_views
-from viewership;
+from viewership)
 
+select sum(laptop_views) as laptop_views,
+       sum(mobile_views) as mobile_vews
+  from cte_table;
