@@ -20,3 +20,10 @@ GROUP BY user_id
 having days_between > 0;
 
 -- using count
+SELECT
+    user_id
+  , datediff(max(date(post_date)), min(date(post_date))) as days_between
+  FROM posts
+WHERE year(post_date) = 2021
+GROUP BY user_id
+having count(post_id) > 1;
