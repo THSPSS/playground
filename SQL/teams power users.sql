@@ -4,8 +4,8 @@
 
 ===========================================================
 
-SELECT sender_id, count(*) FROM messages
+SELECT sender_id, count(message_id) FROM messages
 where sent_date between '2022-08-01' and '2022-08-30'
 group by sender_id
-order by count(*) desc
+order by count(message_id) desc
 limit 2;
