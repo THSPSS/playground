@@ -8,6 +8,12 @@ Duplicate job listings are defined as two job listings within the same company t
 
 =========================
 
-SELECT company_id, count(company_id) FROM job_listings
-group by company_id
-having count(company_id) = 2;
+with cte_company_duplicates as(
+select company_id, count(company_id) , count(title), count(description)
+from job_listings
+group by company_id ,title, description
+having count(title) = 2 and count(description) = 2
+)
+
+select count(*)
+from cte_company_duplicates;
