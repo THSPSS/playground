@@ -17,3 +17,17 @@ having count(title) = 2 and count(description) = 2
 
 select count(*)
 from cte_company_duplicates;
+
+================new solution
+
+WITH
+  job_count_cte AS (
+select company_id, title, description, count(job_id) AS job_list_counts
+FROM job_listings
+group by company_id, title, description
+)
+
+SELECT COUNT(DISTINCT company_id) AS duplicate_companies
+  FROM job_count_cte
+WHERE job_list_counts > 1;
+
